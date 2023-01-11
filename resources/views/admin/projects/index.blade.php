@@ -2,6 +2,11 @@
 
 @section('content')
 
+<h1>Projects</h1>
+
+<a name="" id="" class="btn  btn-primary position-fixed bottom-0 end-0 m-3" href="{{route('admin.projects.create')}}"
+    role="button">
+    <i class="fas fa-plus fa-lg fa-fw"> </i></a>
 
 <div class="table-responsive">
     <table class="table table-striped

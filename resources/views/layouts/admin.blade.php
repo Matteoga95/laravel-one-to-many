@@ -69,7 +69,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{route('admin.projects.index')}}">
                                     <span data-feather="file" class="align-text-bottom"></span>
                                     <i class="fas fa-pencil fa-sm fa-fw"></i> Projects
                                 </a>
@@ -82,7 +82,7 @@
                     </div>
                 </nav>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pt-4">
                     @yield('content')
                 </main>
             </div>

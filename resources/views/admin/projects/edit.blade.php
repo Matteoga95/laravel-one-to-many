@@ -8,10 +8,10 @@
 @include('partials.errors')
 
 
-<form action="{{route('admin.projects.update',$project->slug)}}" method="put">
+<form action="{{route('admin.projects.update',$project->slug)}}" method="post">
 
     @csrf
-
+    @method('PUT')
     <div class="mb-3">
         <label for="project_title" class="form-label">Project project title</label>
         <input type="text" name="project_title" id="project_title"

@@ -4,7 +4,13 @@
 
 <h1>Projects</h1>
 
+@if (session('message'))
+<div class="alert alert-success">
+    {{session('message')}}
 
+</div>
+
+@endif
 
 <a name="" id="" class="btn  btn-primary position-fixed bottom-0 end-0 m-3" href="{{route('admin.projects.create')}}"
     role="button">

@@ -30,10 +30,14 @@
 
             <option value="">Deselect a type</option>
 
-            @foreach ($types as $type)
-            <option value="{{$type->id}}" {{ $type->id == old('type_id' , $project->type->id) ? 'selected' : '' }}>
-                {{$type->name}}</option>
-            @endforeach
+            @forelse ($types as $type)
+            <option value="{{$type->id}}"
+                {{ $type->id == old('type_id' ,$project->type ? $project->type->id : '') ? 'selected' : '' }}>
+                {{$type->name}}
+            </option>
+            @empty
+            <option value="">Sorry, no types in the system</option>
+            @endforelse
 
 
         </select>

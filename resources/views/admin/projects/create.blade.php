@@ -25,12 +25,13 @@
 
     <div class="mb-3">
         <label for="type_id" class="form-label">Types</label>
-        <select class="form-select form-select-lg  " name="type_id" id="type_id">
+        <select class="form-select form-select-lg @error('type_id') 'is-invalid' @enderror  " name="type_id"
+            id="type_id">
 
             <option selected>Seelect a type</option>
 
             @foreach ($types as $type)
-            <option value="{{$type->id}}">{{$type->name}}</option>
+            <option value="{{$type->id}}" {{ old('type_id') ? 'selected' : '' }}>{{$type->name}}</option>
             @endforeach
 
 
